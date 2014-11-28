@@ -10,9 +10,9 @@
 <?rfc inline="yes"?>
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
-<rfc category="std" docName="draft-ietf-rtcweb-overview-11" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-rtcweb-overview-13" ipr="trust200902">
   <front>
-    <title abbrev="RTCWEB Overview">Overview: Real Time Protocols for
+    <title abbrev="WebRTC Overview">Overview: Real Time Protocols for
     Browser-based Applications</title>
 
     <author fullname="Harald T. Alvestrand" initials="H. T. "
@@ -36,7 +36,7 @@
       </address>
     </author>
 
-    <date day="18" month="August" year="2014"/>
+    <date day="28" month="November" year="2014"/>
 
     <abstract>
       <t>This document gives an overview and context of a protocol suite
@@ -49,7 +49,7 @@
       specified and on the right publication track.</t>
 
       <t>This document is an Applicability Statement - it does not itself
-      specify any protocol, but specifies which other specifications RTCWEB
+      specify any protocol, but specifies which other specifications WebRTC
       compliant implementations are supposed to follow.</t>
 
       <t>This document is a work item of the RTCWEB working group.</t>
@@ -100,7 +100,7 @@
       interactive audio and video in applications that communicate directly
       between browsers across the Internet. The resulting protocol suite is
       intended to enable all the applications that are described as required
-      scenarios in the RTCWEB use cases document <xref
+      scenarios in the use cases document <xref
       target="I-D.ietf-rtcweb-use-cases-and-requirements"/>.</t>
 
       <t>Other efforts, for instance the W3C WEBRTC, Web Applications and
@@ -118,20 +118,20 @@
       <t/>
 
       <section title="Goals of this document">
-        <t>The goal of the RTCWEB protocol specification is to specify a set
+        <t>The goal of the WebRTC protocol specification is to specify a set
         of protocols that, if all are implemented, will allow an
         implementation to communicate with another implementation using audio,
         video and data sent along the most direct possible path between the
         participants.</t>
 
-        <t>This document is intended to serve as the roadmap to the RTCWEB
+        <t>This document is intended to serve as the roadmap to the WebRTC
         specifications. It defines terms used by other pieces of
         specification, lists references to other specifications that don't
-        need further elaboration in the RTCWEB context, and gives pointers to
-        other documents that form part of the RTCWEB suite.</t>
+        need further elaboration in the WebRTC context, and gives pointers to
+        other documents that form part of the WebRTC suite.</t>
 
         <t>By reading this document and the documents it refers to, it should
-        be possible to have all information needed to implement an RTCWEB
+        be possible to have all information needed to implement an WebRTC
         compatible implementation.</t>
       </section>
 
@@ -163,23 +163,44 @@
         should be clear which protocol options and features will be invoked.
         Both subject to constraints of the implementation, of course.</t>
 
-        <t>For the purpose of this document, three classes of things that can
-        claim conformance are defined:</t>
+        <t>For the purpose of this document, we define the following
+        terminology to talk about WebRTC things:</t>
 
         <t><list style="symbols">
-            <t>A WebRTC browser is something that conforms to both the
-            protocol specification and the Javascript API defined above.</t>
+            <t>A WebRTC browser (also called a WebRTC User Agent or WebRTC UA)
+            is something that conforms to both the protocol specification and
+            the Javascript API defined above.</t>
 
-            <t>A WebRTC device is something that conforms to the protocol
-            specification, but does not claim to implement the Javascript
-            API.</t>
+            <t>A WebRTC non-browser is something that conforms to the protocol
+            specification, but does not claim to implement the Javascript API.
+            This can also be called a "WebRTC device" or "WebRTC native
+            application".</t>
 
-            <t>A WebRTC gateway is something that mediates media traffic to
-            non-WebRTC entities. It is like a device, but has certain
-            restrictiions on where it can operate, which means that some of
-            the requirements can be relaxed.</t>
-          </list>All WebRTC browsers are WebRTC devices, so any requirement on
-        a WebRTC device also applies to a WebRTC browser.</t>
+            <t>A WebRTC endpoint is either a WebRTC browser or a WebRTC
+            non-browser. It conforms to the protocol specification.</t>
+
+            <t>A WebRTC-compatible endpoint is an endpoint that is able to
+            successfully communicate with a WebRTC endpoint, but may fail to
+            meet some requirements of a WebRTC endpoint. This may limit where
+            in the network such an endpoint can be attached, or may limit the
+            security guarantees that it offers to others. It is not
+            constrained by this specification; when it is mentioned at all, it
+            is to note the implications on WebRTC-compatible endpoints of the
+            requirements placed on WebRTC endpoints.</t>
+
+            <t>A WebRTC gateway is a WebRTC-compatible endpoint that mediates
+            media traffic to non-WebRTC entities.</t>
+          </list>All WebRTC browsers are WebRTC endpoints, so any requirement
+        on a WebRTC endpoint also applies to a WebRTC browser.</t>
+
+        <t>A WebRTC non-browser may be capable of hosting applications in a
+        similar way to the way in which a browser can host Javascript
+        applications, typically by offering APIs in other languages. For
+        instance it may be implemented as a library that offers a C++ API
+        intended to be loaded into applications. In this case, similar
+        security considerations as for Javascript may be needed; however,
+        since such APIs are not defined or referenced here, this document
+        cannot give any specific rules for those interfaces.</t>
 
         <t>WebRTC gateways are described in a separate document, <xref
         target="I-D.alvestrand-rtcweb-gateways"/>.</t>
@@ -226,10 +247,10 @@
       </section>
 
       <section title="Terminology">
-        <t>The following terms are used in this document, and as far as
-        possible across the documents specifying the RTCWEB suite, in the
-        specific meanings given here. Not all terms are used in this document.
-        Other terms are used in their commonly used meaning.</t>
+        <t>The following terms are used across the documents specifying the
+        WebRTC suite, in the specific meanings given here. Not all terms are
+        used in this document. Other terms are used in their commonly used
+        meaning.</t>
 
         <t>The list is in alphabetical order.</t>
 
@@ -244,7 +265,8 @@
 
             <t hangText="Browser:">Used synonymously with "Interactive User
             Agent" as defined in the HTML specification <xref
-            target="W3C.WD-html5-20110525"/>.</t>
+            target="W3C.WD-html5-20110525"/>. See also "WebRTC User
+            Agent".</t>
 
             <t hangText="ICE Agent:">An implementation of the Interactive
             Connectivty Establishment (ICE) <xref target="RFC5245"/> protocol.
@@ -262,7 +284,7 @@
             with "transmission media" such as wires.</t>
 
             <t hangText="Media path:">The path that media data follows from
-            one WebRTC device to another.</t>
+            one WebRTC endpoint to another.</t>
 
             <t hangText="Protocol:">A specification of a set of data units,
             their representation, and rules for their transmission, with their
@@ -286,13 +308,6 @@
             between entities participating in signaling to transfer signaling.
             There may be more entities in the signaling path than in the media
             path.</t>
-
-            <t hangText="WebRTC Browser:">Browser that conforms to the WebRTC
-            protocol specifications and offer the WebRTC Javascript APIs.</t>
-
-            <t hangText="WebRTC Device:">An unit (software, hardware or
-            combinations) that conforms to the WebRTC protocol specifications,
-            but does not offer the WebRTC Javascript APIs.</t>
           </list>NOTE: Where common definitions exist for these terms, those
         definitions should be used to the greatest extent possible.</t>
       </section>
@@ -361,7 +376,7 @@
 
       <t>As for all protocol and API specifications, there is no restriction
       that the protocols can only be used to talk to another browser; since
-      they are fully specified, any device that implements the protocols
+      they are fully specified, any endpoint that implements the protocols
       faithfully should be able to interoperate with the application running
       in the browser.</t>
 
@@ -400,7 +415,7 @@
 
       <t>On this drawing, the critical part to note is that the media path
       ("low path") goes directly between the browsers, so it has to be
-      conformant to the specifications of the RTCWEB protocol suite; the
+      conformant to the specifications of the WebRTC protocol suite; the
       signaling path ("high path") goes via servers that can modify, translate
       or massage the signals as needed.</t>
 
@@ -423,8 +438,8 @@
       running in the browser and the web server.</t>
 
       <t>The choice of protocols, and definition of the translation between
-      them, is outside the scope of the RTCWEB standards suite described in
-      the document.</t>
+      them, is outside the scope of the WebRTC protocol suite described in the
+      document.</t>
 
       <t>The functionality groups that are needed in the browser can be
       specified, more or less from the bottom up, as:</t>
@@ -494,7 +509,7 @@
       <t>It includes necessary functions for congestion control: When not to
       send data.</t>
 
-      <t>WebRTC devices MUST implement the transport protocols described in
+      <t>WebRTC endpoints MUST implement the transport protocols described in
       <xref target="I-D.ietf-rtcweb-transports"/>.</t>
     </section>
 
@@ -505,7 +520,7 @@
 
       <t>The detailed considerations for usage of functions from RTP and SRTP
       are given in <xref target="I-D.ietf-rtcweb-rtp-usage"/>. The security
-      considerations for the RTCWEB use case are in <xref
+      considerations for the WebRTC use case are in <xref
       target="I-D.ietf-rtcweb-security"/>, and the resulting security
       functions are described in <xref
       target="I-D.ietf-rtcweb-security-arch"/>.</t>
@@ -513,10 +528,10 @@
       <t>Considerations for the transfer of data that is not in RTP format is
       described in <xref target="I-D.ietf-rtcweb-data-channel"/>, and a
       supporting protocol for establishing individual data channels is
-      described in <xref target="I-D.ietf-rtcweb-data-protocol"/>. Webrtc
-      devices MUST implement these two specifications.</t>
+      described in <xref target="I-D.ietf-rtcweb-data-protocol"/>. WebRTC
+      endpoints MUST implement these two specifications.</t>
 
-      <t>WebRTC devices MUST implement <xref
+      <t>WebRTC endpoints MUST implement <xref
       target="I-D.ietf-rtcweb-rtp-usage"/>, <xref
       target="I-D.ietf-rtcweb-security"/>, <xref
       target="I-D.ietf-rtcweb-security-arch"/>, and the requirements they
@@ -533,11 +548,9 @@
       specification, and leaves further codecs to be included at the will of
       the implementor.</t>
 
-      <t>WebRTC devices MUST implement the codecs and profiles required in
-      <xref target="I-D.ietf-rtcweb-audio"/></t>
-
-      <t>NOTE IN DRAFT: At this time (June 2014) there is no consensus on what
-      to say about video codecs in this section.</t>
+      <t>WebRTC endpoints that support audio and/or video MUST implement the
+      codecs and profiles required in <xref target="I-D.ietf-rtcweb-audio"/>
+      and <xref target="I-D.ietf-rtcweb-video"/>.</t>
     </section>
 
     <section title="Connection management">
@@ -548,10 +561,10 @@
       <t>The following principles apply:</t>
 
       <t><list style="numbers">
-          <t>The RTCWEB media negotiations will be capable of representing the
+          <t>The WebRTC media negotiations will be capable of representing the
           same SDP offer/answer semantics that are used in SIP <xref
           target="RFC3264"/>, in such a way that it is possible to build a
-          signaling gateway between SIP and the RTCWEB media negotiation.</t>
+          signaling gateway between SIP and the WebRTC media negotiation.</t>
 
           <t>It will be possible to gateway between legacy SIP devices that
           support ICE and appropriate RTP / SDP mechanisms, codecs and
@@ -568,14 +581,14 @@
           written before the codecs were specified should automatically be
           able to use the new codecs where appropriate with no changes to the
           JS applications.</t>
-        </list>The particular choices made for RTCWEB, and their implications
-      for the API offered by a browser implementing RTCWEB, are described in
+        </list>The particular choices made for WebRTC, and their implications
+      for the API offered by a browser implementing WebRTC, are described in
       <xref target="I-D.ietf-rtcweb-jsep"/>.</t>
 
       <t>WebRTC browsers MUST implement <xref
       target="I-D.ietf-rtcweb-jsep"/>.</t>
 
-      <t>WebRTC devices MUST implement the functions described in that
+      <t>WebRTC endpoints MUST implement the functions described in that
       document that relate to the network layer (for example Bundle, RTCP-mux
       and Trickle ICE), but do not need to support the API functionality
       described there.</t>
@@ -624,15 +637,15 @@
 
           <t>Automatic gain control, if present, should normalize a speaking
           voice into a reasonable dB range.</t>
-        </list>The requirements on RTCWEB systems with regard to audio
+        </list>The requirements on WebRTC systems with regard to audio
       processing are found in <xref target="I-D.ietf-rtcweb-audio"/>; the
       proposed API for control of local devices are found in <xref
       target="W3C.WD-mediacapture-streams-20120628"/>.</t>
 
-      <t>WebRTC browsers MUST implement the processing functions in <xref
+      <t>WebRTC endpoints MUST implement the processing functions in <xref
       target="I-D.ietf-rtcweb-audio"/>. (Together with the requirement in<xref
-      target="ch-data"/>, this means that browsers MUST implement the whole
-      document.)</t>
+      target="ch-data"/>, this means that WebRTC endpoints MUST implement the
+      whole document.)</t>
     </section>
 
     <section anchor="IANA" title="IANA Considerations">
@@ -715,6 +728,8 @@
       <?rfc include='reference.I-D.ietf-rtcweb-security-arch'?>
 
       <?rfc include='reference.I-D.ietf-rtcweb-jsep'?>
+
+      <?rfc include='reference.I-D.ietf-rtcweb-video'?>
 
       <?rfc include='reference.W3C.WD-webrtc-20120209'?>
 
@@ -888,6 +903,26 @@
 
         <t>Made a number of text clarifications in response to document
         reviews.</t>
+      </section>
+
+      <section title="Changes from -11 to -12">
+        <t>Refined entity definitions to define "WebRTC endpoint" and
+        "WebRTC-compatible endpoint".</t>
+
+        <t>Changed remaining usage of the term "RTCWEB" to "WebRTC", including
+        in the page header.</t>
+      </section>
+
+      <section title="Changes from -12 to -13">
+        <t>Changed "WebRTC device" to be "WebRTC non-browser", per decision at
+        IETF 91. This led to the need for "WebRTC endpoint" as the common
+        label for both, and the usage of that term in the rest of the
+        document.</t>
+
+        <t>Added words about WebRTC APIs in languages other than
+        Javascript.</t>
+
+        <t>Referenced draft-ietf-rtcweb-video for video codecs to support.</t>
       </section>
     </section>
   </back>
