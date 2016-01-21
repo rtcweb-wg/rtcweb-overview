@@ -10,7 +10,7 @@
 <?rfc inline="yes"?>
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
-<rfc category="std" docName="draft-ietf-rtcweb-overview-14" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-rtcweb-overview-15" ipr="trust200902">
   <front>
     <title abbrev="WebRTC Overview">Overview: Real Time Protocols for
     Browser-based Applications</title>
@@ -36,7 +36,7 @@
       </address>
     </author>
 
-    <date day="16" month="June" year="2015"/>
+    <date day="21" month="January" year="2016"/>
 
     <abstract>
       <t>This document gives an overview and context of a protocol suite
@@ -203,7 +203,7 @@
         cannot give any specific rules for those interfaces.</t>
 
         <t>WebRTC gateways are described in a separate document, <xref
-        target="I-D.alvestrand-rtcweb-gateways"/>.</t>
+        target="I-D.ietf-rtcweb-gateways"/>.</t>
       </section>
 
       <section title="On interoperability and innovation">
@@ -749,7 +749,7 @@
 
       <?rfc include='reference.W3C.WD-html5-20110525'?>
 
-      <?rfc include='reference.I-D.alvestrand-rtcweb-gateways'?>
+      <?rfc include='reference.I-D.ietf-rtcweb-gateways'?>
     </references>
 
     <section title="Change log">
@@ -927,8 +927,10 @@
 
       <section title="Changes from -13 to -14">
         <t>None. This is a "keepalive" update.</t>
+      </section>
 
-        <t/>
+      <section title="Changes from -14 to -15">
+        <t>Changed "gateways" reference to point to the WG document.</t>
       </section>
     </section>
   </back>
