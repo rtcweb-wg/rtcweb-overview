@@ -643,7 +643,7 @@
       target="W3C.WD-mediacapture-streams-20120628"/>.</t>
 
       <t>WebRTC endpoints MUST implement the processing functions in <xref
-      target="I-D.ietf-rtcweb-audio"/>. (Together with the requirement in<xref
+      target="I-D.ietf-rtcweb-audio"/>. (Together with the requirement in <xref
       target="ch-data"/>, this means that WebRTC endpoints MUST implement the
       whole document.)</t>
     </section>
