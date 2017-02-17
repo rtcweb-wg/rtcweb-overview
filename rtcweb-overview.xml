@@ -10,7 +10,7 @@
 <?rfc inline="yes"?>
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
-<rfc category="std" docName="draft-ietf-rtcweb-overview-15" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-rtcweb-overview-16" ipr="trust200902">
   <front>
     <title abbrev="WebRTC Overview">Overview: Real Time Protocols for
     Browser-based Applications</title>
@@ -36,7 +36,7 @@
       </address>
     </author>
 
-    <date day="21" month="January" year="2016"/>
+    <date day="14" month="November" year="2016"/>
 
     <abstract>
       <t>This document gives an overview and context of a protocol suite
@@ -931,6 +931,10 @@
 
       <section title="Changes from -14 to -15">
         <t>Changed "gateways" reference to point to the WG document.</t>
+      </section>
+
+      <section title="Changes from -15 to -16">
+        <t>None. This is a "keepalive" publication.</t>
       </section>
     </section>
   </back>
