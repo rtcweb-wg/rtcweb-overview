@@ -114,6 +114,13 @@
       overall effort consisting of both IETF and W3C efforts.</t>
     </section>
 
+    <section title="Requirements Language">
+      <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+      "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+      document are to be interpreted as described in [RFC2119].
+      </t>
+    </section>
+
     <section title="Principles and Terminology">
       <t/>
 
@@ -712,6 +719,8 @@
 
   <back>
     <references title="Normative References">
+      <?rfc include='reference.RFC.2119'?>
+
       <?rfc include='reference.RFC.3550'?>
 
       <?rfc include='reference.RFC.3264'?>
