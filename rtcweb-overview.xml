@@ -114,13 +114,6 @@
       overall effort consisting of both IETF and W3C efforts.</t>
     </section>
 
-    <section title="Requirements Language">
-      <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
-      "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
-      document are to be interpreted as described in <xref target="RFC2119/">.
-      </t>
-    </section>
-
     <section title="Principles and Terminology">
       <t/>
 
@@ -255,6 +248,11 @@
       </section>
 
       <section title="Terminology">
+        <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+        "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+        document are to be interpreted as described in <xref
+        target="RFC2119"/>.</t>
+
         <t>The following terms are used across the documents specifying the
         WebRTC suite, in the specific meanings given here. Not all terms are
         used in this document. Other terms are used in their commonly used
