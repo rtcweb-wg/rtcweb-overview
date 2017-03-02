@@ -101,7 +101,7 @@
       between browsers across the Internet. The resulting protocol suite is
       intended to enable all the applications that are described as required
       scenarios in the use cases document <xref
-      target="I-D.ietf-rtcweb-use-cases-and-requirements"/>.</t>
+      target="RFC7478"/>.</t>
 
       <t>Other efforts, for instance the W3C WEBRTC, Web Applications and
       Device API working groups, focus on making standardized APIs and
@@ -555,8 +555,8 @@
       the implementor.</t>
 
       <t>WebRTC endpoints that support audio and/or video MUST implement the
-      codecs and profiles required in <xref target="I-D.ietf-rtcweb-audio"/>
-      and <xref target="I-D.ietf-rtcweb-video"/>.</t>
+      codecs and profiles required in <xref target="RFC7874"/>
+      and <xref target="RFC7742"/>.</t>
     </section>
 
     <section title="Connection management">
@@ -644,12 +644,12 @@
           <t>Automatic gain control, if present, should normalize a speaking
           voice into a reasonable dB range.</t>
         </list>The requirements on WebRTC systems with regard to audio
-      processing are found in <xref target="I-D.ietf-rtcweb-audio"/>; the
+      processing are found in <xref target="RFC7874"/>; the
       proposed API for control of local devices are found in <xref
       target="W3C.WD-mediacapture-streams-20120628"/>.</t>
 
       <t>WebRTC endpoints MUST implement the processing functions in <xref
-      target="I-D.ietf-rtcweb-audio"/>. (Together with the requirement in
+      target="RFC7874"/>. (Together with the requirement in
       <xref target="ch-data"/>, this means that WebRTC endpoints MUST
       implement the whole document.)</t>
     </section>
@@ -718,9 +718,11 @@
 
       <?rfc include='reference.RFC.3711'?>
 
-      <?rfc include='reference.I-D.ietf-ice-rfc5245bis'?>
+      <?rfc include='reference.RFC.7742'?> 
 
-      <?rfc include='reference.I-D.ietf-rtcweb-audio'?>
+      <?rfc include='reference.RFC.7874'?>
+
+      <?rfc include='reference.I-D.ietf-ice-rfc5245bis'?>
 
       <?rfc include='reference.I-D.ietf-rtcweb-security'?>
 
@@ -736,8 +738,6 @@
 
       <?rfc include='reference.I-D.ietf-rtcweb-jsep'?>
 
-      <?rfc include='reference.I-D.ietf-rtcweb-video'?>
-
       <?rfc include='reference.W3C.WD-webrtc-20120209'?>
 
       <?rfc include='reference.W3C.WD-mediacapture-streams-20120628'?>
@@ -752,7 +752,7 @@
 
       <?rfc include='reference.RFC.6120'?>
 
-      <?rfc include='reference.I-D.ietf-rtcweb-use-cases-and-requirements'?>
+      <?rfc include='reference.RFC.7478'?>
 
       <?rfc include='reference.W3C.WD-html5-20110525'?>
 
