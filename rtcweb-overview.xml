@@ -10,7 +10,7 @@
 <?rfc inline="yes"?>
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
-<rfc category="std" docName="draft-ietf-rtcweb-overview-17" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-rtcweb-overview-18" ipr="trust200902">
   <front>
     <title abbrev="WebRTC Overview">Overview: Real Time Protocols for
     Browser-based Applications</title>
@@ -36,7 +36,7 @@
       </address>
     </author>
 
-    <date day="17" month="February" year="2017"/>
+    <date day="3" month="March" year="2017"/>
 
     <abstract>
       <t>This document gives an overview and context of a protocol suite
@@ -169,7 +169,7 @@
         <t><list style="symbols">
             <t>A WebRTC browser (also called a WebRTC User Agent or WebRTC UA)
             is something that conforms to both the protocol specification and
-            the Javascript API defined above.</t>
+            the Javascript API cited above.</t>
 
             <t>A WebRTC non-browser is something that conforms to the protocol
             specification, but does not claim to implement the Javascript API.
@@ -247,6 +247,11 @@
       </section>
 
       <section title="Terminology">
+        <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+        "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+        document are to be interpreted as described in <xref
+        target="RFC2119"/>.</t>
+
         <t>The following terms are used across the documents specifying the
         WebRTC suite, in the specific meanings given here. Not all terms are
         used in this document. Other terms are used in their commonly used
@@ -276,7 +281,8 @@
             Connectivity Establishment (ICE) <xref
             target="I-D.ietf-ice-rfc5245bis"/> protocol. An ICE Agent may also
             be an SDP Agent, but there exist ICE Agents that do not use SDP
-            (for instance those that use Jingle).</t>
+            (for instance those that use Jingle <xref target="XEP-0166">
+            </xref>).</t>
 
             <t hangText="Interactive:">Communication between multiple parties,
             where the expectation is that an action from one party can cause a
@@ -313,8 +319,7 @@
             between entities participating in signaling to transfer signaling.
             There may be more entities in the signaling path than in the media
             path.</t>
-          </list>NOTE: Where common definitions exist for these terms, those
-        definitions should be used to the greatest extent possible.</t>
+          </list></t>
       </section>
     </section>
 
@@ -555,8 +560,8 @@
       the implementor.</t>
 
       <t>WebRTC endpoints that support audio and/or video MUST implement the
-      codecs and profiles required in <xref target="RFC7874"/>
-      and <xref target="RFC7742"/>.</t>
+      codecs and profiles required in <xref target="RFC7874"/> and <xref
+      target="RFC7742"/>.</t>
     </section>
 
     <section title="Connection management">
@@ -630,8 +635,8 @@
       management including focus, zoom, pan/tilt controls (if available), and
       more.</t>
 
-      <t>Certain parts of the system SHOULD conform to certain properties, for
-      instance:</t>
+      <t>One would want to see certain parts of the system conform to certain
+      properties, for instance:</t>
 
       <t><list style="symbols">
           <t>Echo cancellation should be good enough to achieve the
@@ -646,14 +651,15 @@
           <t>Automatic gain control, if present, should normalize a speaking
           voice into a reasonable dB range.</t>
         </list>The requirements on WebRTC systems with regard to audio
-      processing are found in <xref target="RFC7874"/>; the
-      proposed API for control of local devices are found in <xref
+      processing are found in <xref target="RFC7874"/> and includes more
+      guidance about echo cancellation and AGC; the proposed API for control
+      of local devices are found in <xref
       target="W3C.WD-mediacapture-streams-20120628"/>.</t>
 
       <t>WebRTC endpoints MUST implement the processing functions in <xref
-      target="RFC7874"/>. (Together with the requirement in
-      <xref target="ch-data"/>, this means that WebRTC endpoints MUST
-      implement the whole document.)</t>
+      target="RFC7874"/>. (Together with the requirement in <xref
+      target="ch-data"/>, this means that WebRTC endpoints MUST implement the
+      whole document.)</t>
     </section>
 
     <section anchor="IANA" title="IANA Considerations">
@@ -705,22 +711,24 @@
       <t>Thanks to Jonathan Rosenberg, Matthew Kaufman and others at Skype for
       the ASCII drawings in section 1.</t>
 
-      <t>Thanks to Bjoern Hoehrmann, Colin Perkins, Colton Shields, Eric
-      Rescorla, Heath Matlock, Henry Sinnreich, Justin Uberti, Keith Drage,
-      Magnus Westerlund, Olle E. Johansson and Simon Leinen for document
-      review.</t>
+      <t>Thanks to Alissa Cooper, Bjoern Hoehrmann, Colin Perkins, Colton
+      Shields, Eric Rescorla, Heath Matlock, Henry Sinnreich, Justin Uberti,
+      Keith Drage, Magnus Westerlund, Olle E. Johansson, Sean Turner and Simon
+      Leinen for document review.</t>
     </section>
   </middle>
 
   <back>
     <references title="Normative References">
+      <?rfc include='reference.RFC.2119'?>
+
       <?rfc include='reference.RFC.3550'?>
 
       <?rfc include='reference.RFC.3264'?>
 
       <?rfc include='reference.RFC.3711'?>
 
-      <?rfc include='reference.RFC.7742'?> 
+      <?rfc include='reference.RFC.7742'?>
 
       <?rfc include='reference.RFC.7874'?>
 
@@ -752,13 +760,80 @@
 
       <?rfc include='reference.RFC.3261'?>
 
+      <?rfc include='reference.RFC.5761'?>
+
       <?rfc include='reference.RFC.6120'?>
 
       <?rfc include='reference.RFC.7478'?>
 
       <?rfc include='reference.W3C.WD-html5-20110525'?>
 
+      <?rfc include='reference.I-D.ietf-ice-trickle'?>
+
+      <?rfc include='reference.I-D.ietf-mmusic-sdp-bundle-negotiation'?>
+
       <?rfc include='reference.I-D.ietf-rtcweb-gateways'?>
+
+      <reference anchor="XEP-0166">
+        <front>
+          <title>Jingle</title>
+
+          <author fullname="Scott Ludwig" initials="S." surname="Ludwig">
+            <organization/>
+
+            <address>
+              <email>scottlu@google.com</email>
+            </address>
+          </author>
+
+          <author fullname="Joe Beda" initials="J." surname="Beda">
+            <organization/>
+
+            <address>
+              <email>jbeda@google.com</email>
+            </address>
+          </author>
+
+          <author fullname="Peter Saint-Andre" initials="P."
+                  surname="Saint-Andre">
+            <organization/>
+
+            <address>
+              <email>stpeter@jabber.org</email>
+            </address>
+          </author>
+
+          <author fullname="Robert McQueen" initials="R." surname="McQueen">
+            <organization/>
+
+            <address>
+              <email>robert.mcqueen@collabora.co.uk</email>
+            </address>
+          </author>
+
+          <author fullname="Sean Egan" initials="S." surname="Egan">
+            <organization/>
+
+            <address>
+              <email>seanegan@google.com</email>
+            </address>
+          </author>
+
+          <author fullname="Joe Hildebrand" initials="J." surname="Hildebrand">
+            <organization/>
+
+            <address>
+              <email>jhildebr@cisco.com</email>
+            </address>
+          </author>
+
+          <date day="20" month="June" year="2007"/>
+        </front>
+
+        <seriesInfo name="XSF XEP" value="0166"/>
+
+        <format target="http://xmpp.org/extensions/xep-0166.html" type="HTML"/>
+      </reference>
     </references>
 
     <section title="Change log">
@@ -949,6 +1024,10 @@
       <section title="Changes from -16 to -17">
         <t>Addressed review comments by Olle E. Johansson and Magnus
         Westerlund</t>
+      </section>
+
+      <section title="Changes from -17 to -18">
+        <t>Addressed review comments from Sean Turner and Alissa Cooper</t>
       </section>
     </section>
   </back>
