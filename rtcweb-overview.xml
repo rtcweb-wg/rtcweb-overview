@@ -595,9 +595,11 @@
       target="I-D.ietf-rtcweb-jsep"/>.</t>
 
       <t>WebRTC endpoints MUST implement the functions described in that
-      document that relate to the network layer (e.g. Bundle, RTCP-mux
-      and Trickle ICE), but do not need to support the API functionality
-      described there.</t>
+      document that relate to the network layer (e.g. Bundle <xref
+      target="I-D.ietf-mmusic-sdp-bundle-negotiation"/>, RTCP-mux <xref
+      target="RFC5761"/> and Trickle ICE <xref
+      target="I-D.ietf-ice-trickle"/>), but do not need to support the API
+      functionality described there.</t>
     </section>
 
     <section title="Presentation and control">
