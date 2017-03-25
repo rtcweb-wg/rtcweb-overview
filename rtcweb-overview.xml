@@ -67,7 +67,7 @@
       special hardware and custom-built software, often at very high prices or
       at low quality, placing great demands on the infrastructure.</t>
 
-      <t>As the available bandwidth has increased, and as processors an other
+      <t>As the available bandwidth has increased, and as processors and other
       hardware has become ever faster, the barriers to participation have
       decreased, and it has become possible to deliver a satisfactory
       experience on commonly available computing hardware.</t>
@@ -130,7 +130,7 @@
         pointers to other documents that form part of the WebRTC suite.</t>
 
         <t>By reading this document and the documents it refers to, it should
-        be possible to have all information needed to implement an WebRTC
+        be possible to have all information needed to implement a WebRTC
         compatible implementation.</t>
       </section>
 
@@ -278,7 +278,7 @@
             endpoints can have multiple data channels between them.</t>
 
             <t hangText="ICE Agent:">An implementation of the Interactive
-            Connectivty Establishment (ICE) <xref
+            Connectivity Establishment (ICE) <xref
             target="I-D.ietf-ice-rfc5245bis"/> protocol. An ICE Agent may also
             be an SDP Agent, but there exist ICE Agents that do not use SDP
             (for instance those that use Jingle <xref target="XEP-0166">
@@ -309,8 +309,8 @@
             communication.</t>
 
             <t hangText="SDP Agent:">The protocol implementation involved in
-            the SDP offer/answer exchange, as defined in <xref
-            target="RFC3264"/> section 3.</t>
+            the Session Description Protocol (SDP) offer/answer exchange, as
+            defined in <xref target="RFC3264"/> section 3.</t>
 
             <t hangText="Signaling:">Communication that happens in order to
             establish, manage and control media paths and data paths.</t>
@@ -356,8 +356,8 @@
                    +----------------------------+                         
                    |    Javascript/HTML/CSS     |                         
                    +----------------------------+                         
-                Other  ^                 ^RTC                             
-                APIs   |                 |APIs                            
+                Other  ^                 ^ RTC                             
+                APIs   |                 | APIs                            
                    +---|-----------------|------+                         
                    |   |                 |      |                         
                    |                 +---------+|                         
@@ -391,7 +391,7 @@
       in the browser.</t>
 
       <t>A commonly imagined model of deployment is the one depicted
-      below.</t>
+      below.  In the figure below JS is Javascript.</t>
 
       <figure anchor="fig-webtrapezoid" title="Browser RTC Trapezoid">
         <artwork><![CDATA[                                                                  
@@ -431,8 +431,8 @@
 
       <t>If the two Web servers are operated by different entities, the
       inter-server signaling mechanism needs to be agreed upon, either by
-      standardization or by other means of agreement. Existing protocols (for
-      example SIP <xref target="RFC3261"/> or XMPP <xref target="RFC6120"/>)
+      standardization or by other means of agreement. Existing protocols
+      (e.g. SIP <xref target="RFC3261"/> or XMPP <xref target="RFC6120"/>)
       could be used between servers, while either a standards-based or
       proprietary protocol could be used between the browser and the web
       server.</t>
@@ -442,10 +442,11 @@
       signaling mechanism (e.g. SIP over WebSockets) or a proprietary
       signaling mechanism used between the application running in the browser
       and the web server. Similarly, if both operators' servers implement
-      XMPP, XMPP could be used for communication between XMPP servers, with
-      either a standardized signaling mechanism (e.g. XMPP over WebSockets or
-      BOSH) or a proprietary signaling mechanism used between the application
-      running in the browser and the web server.</t>
+      Extensible Messaging and Presence Protocol (XMPP), XMPP could be used
+      for communication between XMPP servers, with either a standardized
+      signaling mechanism (e.g. XMPP over WebSockets or BOSH) or a proprietary
+      signaling mechanism used between the application running in the browser
+      and the web server.</t>
 
       <t>The choice of protocols for client-server and inter-server
       signalling, and definition of the translation between them, is outside
@@ -599,7 +600,7 @@
       target="I-D.ietf-rtcweb-jsep"/>.</t>
 
       <t>WebRTC endpoints MUST implement the functions described in that
-      document that relate to the network layer (for example Bundle <xref
+      document that relate to the network layer (e.g. Bundle <xref
       target="I-D.ietf-mmusic-sdp-bundle-negotiation"/>, RTCP-mux <xref
       target="RFC5761"/> and Trickle ICE <xref
       target="I-D.ietf-ice-trickle"/>), but do not need to support the API
