@@ -444,9 +444,9 @@
       and the web server. Similarly, if both operators' servers implement
       Extensible Messaging and Presence Protocol (XMPP), XMPP could be used
       for communication between XMPP servers, with either a standardized
-      signaling mechanism (e.g. XMPP over WebSockets or BOSH) or a proprietary
-      signaling mechanism used between the application running in the browser
-      and the web server.</t>
+      signaling mechanism (e.g. XMPP over WebSockets or BOSH <xref
+      target="XEP-0124"/> or a proprietary signaling mechanism used between the
+      application running in the browser and the web server.</t>
 
       <t>The choice of protocols for client-server and inter-server
       signalling, and definition of the translation between them, is outside
@@ -834,6 +834,68 @@
 
         <format target="http://xmpp.org/extensions/xep-0166.html" type="HTML"/>
       </reference>
+
+      <reference anchor="XEP-0124">
+         <front>                                                                                                               <title>BOSH</title>
+
+           <author fullname="Ian Paterson" initials="I." surname="Paterson">
+             <organization/>
+
+            <address>
+               <email>ian.paterson@clientside.co.uk</email>
+             </address>
+           </author>
+ 
+           <author fullname="Dave Smith" initials="D." surname="Smith">
+             <organization/>
+ 
+             <address>
+               <email>dizzyd@jabber.org</email>
+             </address>
+           </author>
+ 
+           <author fullname="Peter Saint-Andre" initials="P."
+                   surname="Saint-Andre">
+             <organization/>
+ 
+             <address>
+               <email>stpeter@jabber.org</email>
+             </address>
+           </author>
+ 
+           <author fullname="Jack Moffitt" initials="J." surname="Moffitt">
+             <organization/>
+ 
+             <address>
+               <email>jack@chesspark.com</email>
+             </address>
+           </author>
+ 
+           <author fullname="Lance Stout" initials="L." surname="Stout">
+             <organization/>
+ 
+             <address>
+               <email>lance@andyet.com</email>
+             </address>
+           </author>
+ 
+           <author fullname="Winifried Tilanus" initials="W." surname="Tilanus">
+              <organization/>
+  
+              <address>
+                <email>winfried@tilanus.com</email>
+              </address>
+            </author>
+ 
+           <date day="16" month="November" year="2016"/>
+
+         </front>
+ 
+        <seriesInfo name="XSF XEP" value="0124"/>
+ 
+         <format target="http://xmpp.org/extensions/xep-0124.html" type="HTML"/>
+       </reference>
+
     </references>
 
     <section title="Change log">
