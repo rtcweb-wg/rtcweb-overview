@@ -456,7 +456,7 @@
       specified, more or less from the bottom up, as:</t>
 
       <t><list style="symbols">
-          <t>Data transport: TCP, UDP and the means to securely set up
+          <t>Data transport: such as TCP, UDP and the means to securely set up
           connections between entities, as well as the functions for deciding
           when to send data: Congestion management, bandwidth estimation and
           so on.</t>
