@@ -427,7 +427,7 @@
       ("low path") goes directly between the browsers, so it has to be
       conformant to the specifications of the WebRTC protocol suite; the
       signaling path ("high path") goes via servers that can modify, translate
-      or massage the signals as needed.</t>
+      or manipulate the signals as needed.</t>
 
       <t>If the two Web servers are operated by different entities, the
       inter-server signaling mechanism needs to be agreed upon, either by
