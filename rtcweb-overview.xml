@@ -583,11 +583,10 @@
           gateway to convert between the signaling on the web side to the SIP
           signaling may be needed.</t>
 
-          <t>When a new codec is specified, and the SDP for the new codec is
-          specified in the MMUSIC WG, no other standardization should be
-          required for it to be possible to use that in the web browsers.
-          Adding new codecs which might have new SDP parameters should not
-          change the APIs between the browser and Javascript application. As
+          <t>When an SDP for a new codec is specified, no other standardization
+          should be required for it to be possible to use that in the web
+          browsers. Adding new codecs which might have new SDP parameters should
+          not change the APIs between the browser and Javascript application. As
           soon as the browsers support the new codecs, old applications
           written before the codecs were specified should automatically be
           able to use the new codecs where appropriate with no changes to the
