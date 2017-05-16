@@ -349,7 +349,7 @@
                                  ^                                        
                                  |                                        
                                  |                                        
-                                 | HTTP/                                  
+                                 | HTTPS/                                  
                                  | WebSockets                             
                                  |                                              
                                  |                                        
@@ -381,7 +381,7 @@
 ]]></artwork>
       </figure>
 
-      <t>Note that HTTP and WebSockets are also offered to the Javascript
+      <t>Note that HTTPS and WebSockets are also offered to the Javascript
       application through browser APIs.</t>
 
       <t>As for all protocol and API specifications, there is no restriction
@@ -406,9 +406,9 @@
                   /                           \                           
                  /                             \ Application-defined      
                 /                               \ over       
-               /                                 \ HTTP/WebSockets                    
+               /                                 \ HTTPS/WebSockets                    
               /  Application-defined over         \                       
-             /   HTTP/WebSockets                   \                      
+             /   HTTPS/WebSockets                  \                      
             /                                       \                     
       +-----------+                           +-----------+               
       |JS/HTML/CSS|                           |JS/HTML/CSS|               
