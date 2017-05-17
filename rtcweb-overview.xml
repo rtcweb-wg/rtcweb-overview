@@ -471,10 +471,10 @@
       <t><list style="symbols">
           <t>Data transport: such as TCP, UDP and the means to securely set up
           connections between entities, as well as the functions for deciding
-          when to send data: Congestion management, bandwidth estimation and
+          when to send data: congestion management, bandwidth estimation and
           so on.</t>
 
-          <t>Data framing: RTP, SCTP, DTLS and other data formats that serve
+          <t>Data framing: RTP, SCTP, DTLS, and other data formats that serve
           as containers, and their functions for data confidentiality and
           integrity.</t>
 
