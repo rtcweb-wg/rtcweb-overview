@@ -518,7 +518,7 @@
       that handle the data, but do not modify it (such as TURN relays).</t>
 
       <t>It includes necessary functions for congestion control,
-      retransmission, and for in-order delivery.</t>
+      retransmission, and in-order delivery.</t>
 
       <t>WebRTC endpoints MUST implement the transport protocols described in
       <xref target="I-D.ietf-rtcweb-transports"/>.</t>
