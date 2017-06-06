@@ -105,9 +105,9 @@
       <t>Other efforts, for instance the W3C Web Real-Time Communications,
       Web Applications Security, and Device and Sensor working groups, focus
       on making standardized APIs and interfaces available, within or
-      alongside the HTML5 effort, for those functions; this memo concentrates
+      alongside the HTML5 effort, for those functions.  This memo concentrates
       on specifying the protocols and subprotocols that are needed to specify
-      the interactions that happen across the network.</t>
+      the interactions over the network.</t>
 
       <t>This memo uses the term "WebRTC" (note the case used) to refer to the
       overall effort consisting of both IETF and W3C efforts.</t>
