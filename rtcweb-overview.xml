@@ -183,24 +183,86 @@
         should be clear which protocol options and features will be invoked.
         Both subject to constraints of the implementation, of course.</t>
 
-        <t>For the purpose of this document, we define the following
-        terminology to talk about WebRTC things:</t>
+        <t>The following terms are used across the documents specifying the
+        WebRTC suite, in the specific meanings given here. Not all terms are
+        used in this document. Other terms are used in their commonly used
+        meaning.</t>
 
-        <t><list style="symbols">
-            <t>A WebRTC browser (also called a WebRTC User Agent or WebRTC UA)
-            is something that conforms to both the protocol specification and
-            the Javascript API cited above.</t>
+        <t><list style="hanging">
+            <t hangText="Agent:">Undefined term. See "SDP Agent" and "ICE
+            Agent".</t>
+             
+            <t hangText="Application Programming Interface (API):">A
+            specification of a set of calls and events, usually tied to a
+            programming language or an abstract formal specification such as
+            WebIDL, with its defined semantics.</t>
+              
+            <t hangText="Browser:">Used synonymously with "Interactive User
+            Agent" as defined in the HTML specification <xref
+            target="W3C.WD-html5-20110525"/>. See also "WebRTC User
+            Agent".</t>
+              
+            <t hangText="Data Channel:">An abstraction that allows data to be
+            sent between WebRTC endpoints in the form of messages. Two
+            endpoints can have multiple data channels between them.</t>
+              
+            <t hangText="ICE Agent:">An implementation of the Interactive
+            Connectivity Establishment (ICE) <xref
+            target="I-D.ietf-ice-rfc5245bis"/> protocol. An ICE Agent may also
+            be an SDP Agent, but there exist ICE Agents that do not use SDP
+            (for instance those that use Jingle <xref target="XEP-0166">
+            </xref>).</t> 
+              
+            <t hangText="Interactive:">Communication between multiple parties,
+            where the expectation is that an action from one party can cause a
+            reaction by another party, and the reaction can be observed by the
+            first party, with the total time required for the
+            action/reaction/observation is on the order of no more than
+            hundreds of milliseconds.</t>
+              
+            <t hangText="Media:">Audio and video content. Not to be confused
+            with "transmission media" such as wires.</t>
+              
+            <t hangText="Media Path:">The path that media data follows from
+            one WebRTC endpoint to another.</t>
 
-            <t>A WebRTC non-browser is something that conforms to the protocol
-            specification, but does not claim to implement the Javascript API.
-            This can also be called a "WebRTC device" or "WebRTC native
-            application".</t>
+            <t hangText="Protocol:">A specification of a set of data units,
+            their representation, and rules for their transmission, with their
+            defined semantics. A protocol is usually thought of as going
+            between systems.</t>
+ 
+            <t hangText="Real-time Media:">Media where generation of content
+            and display of content are intended to occur closely together in
+            time (on the order of no more than hundreds of milliseconds).
+            Real-time media can be used to support interactive
+            communication.</t>
 
-            <t>A WebRTC endpoint is either a WebRTC browser or a WebRTC
-            non-browser. It conforms to the protocol specification.</t>
+            <t hangText="SDP Agent:">The protocol implementation involved in
+            the Session Description Protocol (SDP) offer/answer exchange, as
+            defined in <xref target="RFC3264"/> section 3.</t>
 
-            <t>A WebRTC-compatible endpoint is an endpoint that is able to
-            successfully communicate with a WebRTC endpoint, but may fail to
+            <t hangText="Signaling:">Communication that happens in order to
+            establish, manage and control media paths and data paths.</t>
+ 
+            <t hangText="Signaling Path:">The communication channels used
+            between entities participating in signaling to transfer signaling.
+            There may be more entities in the signaling path than in the media
+            path.</t>
+
+            <t hangText="WebRTC Browser:">(also called a WebRTC User Agent
+            or WebRTC UA) Something that conforms to both the protocol
+            specification and the Javascript API cited above.</t>
+
+            <t hangtext="WebRTC non-Browser:"> Something that conforms to
+            the protocol specification, but does not claim to implement the
+            Javascript API.  This can also be called a "WebRTC device" or
+            "WebRTC native application".</t>
+
+            <t hangtext="WebRTC Endpoint:"> Either a WebRTC browser or a
+            WebRTC non-browser. It conforms to the protocol specification.</t>
+
+            <t hangtext="WebRTC-compatible Endpoint:"> An endpoint that is able
+            to successfully communicate with a WebRTC endpoint, but may fail to
             meet some requirements of a WebRTC endpoint. This may limit where
             in the network such an endpoint can be attached, or may limit the
             security guarantees that it offers to others. It is not
@@ -208,8 +270,8 @@
             is to note the implications on WebRTC-compatible endpoints of the
             requirements placed on WebRTC endpoints.</t>
 
-            <t>A WebRTC gateway is a WebRTC-compatible endpoint that mediates
-            media traffic to non-WebRTC entities.</t>
+            <t hangtext="WebRTC Gateway:"> A WebRTC-compatible endpoint that
+            mediates media traffic to non-WebRTC entities.</t>
           </list>All WebRTC browsers are WebRTC endpoints, so any requirement
         on a WebRTC endpoint also applies to a WebRTC browser.</t>
 
@@ -271,75 +333,6 @@
         "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
         document are to be interpreted as described in <xref
         target="RFC2119"/>.</t>
-
-        <t>The following terms are used across the documents specifying the
-        WebRTC suite, in the specific meanings given here. Not all terms are
-        used in this document. Other terms are used in their commonly used
-        meaning.</t>
-
-        <t>The list is in alphabetical order.</t>
-
-        <t><list style="hanging">
-            <t hangText="Agent:">Undefined term. See "SDP Agent" and "ICE
-            Agent".</t>
-
-            <t hangText="API:">Application Programming Interface - a
-            specification of a set of calls and events, usually tied to a
-            programming language or an abstract formal specification such as
-            WebIDL, with its defined semantics.</t>
-
-            <t hangText="Browser:">Used synonymously with "Interactive User
-            Agent" as defined in the HTML specification <xref
-            target="W3C.WD-html5-20110525"/>. See also "WebRTC User
-            Agent".</t>
-
-            <t hangText="Data channel:">An abstraction that allows data to be
-            sent between WebRTC endpoints in the form of messages. Two
-            endpoints can have multiple data channels between them.</t>
-
-            <t hangText="ICE Agent:">An implementation of the Interactive
-            Connectivity Establishment (ICE) <xref
-            target="I-D.ietf-ice-rfc5245bis"/> protocol. An ICE Agent may also
-            be an SDP Agent, but there exist ICE Agents that do not use SDP
-            (for instance those that use Jingle <xref target="XEP-0166">
-            </xref>).</t>
-
-            <t hangText="Interactive:">Communication between multiple parties,
-            where the expectation is that an action from one party can cause a
-            reaction by another party, and the reaction can be observed by the
-            first party, with the total time required for the
-            action/reaction/observation is on the order of no more than
-            hundreds of milliseconds.</t>
-
-            <t hangText="Media:">Audio and video content. Not to be confused
-            with "transmission media" such as wires.</t>
-
-            <t hangText="Media path:">The path that media data follows from
-            one WebRTC endpoint to another.</t>
-
-            <t hangText="Protocol:">A specification of a set of data units,
-            their representation, and rules for their transmission, with their
-            defined semantics. A protocol is usually thought of as going
-            between systems.</t>
-
-            <t hangText="Real-time media:">Media where generation of content
-            and display of content are intended to occur closely together in
-            time (on the order of no more than hundreds of milliseconds).
-            Real-time media can be used to support interactive
-            communication.</t>
-
-            <t hangText="SDP Agent:">The protocol implementation involved in
-            the Session Description Protocol (SDP) offer/answer exchange, as
-            defined in <xref target="RFC3264"/> section 3.</t>
-
-            <t hangText="Signaling:">Communication that happens in order to
-            establish, manage and control media paths and data paths.</t>
-
-            <t hangText="Signaling Path:">The communication channels used
-            between entities participating in signaling to transfer signaling.
-            There may be more entities in the signaling path than in the media
-            path.</t>
-          </list></t>
       </section>
     </section>
 
