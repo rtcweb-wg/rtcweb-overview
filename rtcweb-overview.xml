@@ -236,10 +236,10 @@
         other party is willing to accept communication at the base level of
         that specification, you can communicate successfully.</t>
 
-        <t>The alternative - that of having no mandatory to implement - does
+        <t>The alternative, that is having no mandatory to implement, does
         not mean that you cannot communicate, it merely means that in order to
         be part of the communications partnership, you have to implement the
-        standard "and then some" - that "and then some" usually being called a
+        standard "and then some".  The "and then some" is usually called a
         profile of some sort; in the version most antithetical to the Internet
         ethos, that "and then some" consists of having to use a specific
         vendor's product only.</t>
