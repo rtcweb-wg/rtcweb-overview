@@ -108,6 +108,27 @@
       on specifying the protocols and subprotocols that are needed to specify
       the interactions over the network.</t>
 
+      <t>Operators should note that deployment of WebRTC will result in a
+      change in the nature of signaling for real time media on the network,
+      and may result in a shift in the kinds of devices used to create and
+      consume such media. In the case of signaling, WebRTC session setup
+      will typically occur over TLS-secured web technologies using
+      application-specific protocols.  Operational techniques that involve
+      inserting network elements to interpret SDP -- either through endpoint
+      cooperation <xref target="RFC3361"/> or through the transparent
+      insertion of SIP Application Level Gateways (ALGs) -- will not work
+      with such signaling. In the case of networks using cooperative
+      endpoints, the approaches defined in <xref target="RFC8155"/> may serve
+      as a suitable replacement for <xref target="RFC3361"/>. The increase in
+      browser-based communications may also lead to a shift away from
+      dedicated real-time-communications hardware, such as SIP
+      desk phones. This will diminish the efficacy of operational
+      techniques that place dedicated real-time devices on their own
+      network segment, address range, or VLAN for purposes such as
+      applying traffic filtering and QoS. Applying the markings
+      described in <xref target="I-D.ietf-tsvwg-rtcweb-qos"/> may be
+      appropriate replacements for such techniques.</t> 
+
       <t>This memo uses the term "WebRTC" (note the case used) to refer to the
       overall effort consisting of both IETF and W3C efforts.</t>
     </section>
@@ -759,11 +780,15 @@
 
       <?rfc include='reference.RFC.3261'?>
 
+      <?rfc include='reference.RFC.3361'?>
+
       <?rfc include='reference.RFC.5761'?>
 
       <?rfc include='reference.RFC.6120'?>
 
       <?rfc include='reference.RFC.7478'?>
+
+      <?rfc include='reference.RFC.8155'?>
 
       <?rfc include='reference.W3C.WD-html5-20110525'?>
 
@@ -772,6 +797,8 @@
       <?rfc include='reference.I-D.ietf-mmusic-sdp-bundle-negotiation'?>
 
       <?rfc include='reference.I-D.ietf-rtcweb-gateways'?>
+
+      <?rfc include='reference.I-D.ietf-tsvwg-rtcweb-qos'?>
 
       <reference anchor="XEP-0166">
         <front>
