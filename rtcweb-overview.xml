@@ -79,8 +79,7 @@
       systems (such as is served by telephone numbers or email addresses in
       other communications systems).</t>
 
-      <t>Development of The Universal Solution has proved hard, however, for
-      all the usual reasons.</t>
+      <t>Development of The Universal Solution has, however, proved hard.</t>
 
       <t>The last few years have also seen a new platform rise for deployment
       of services: The browser-embedded application, or "Web application". It
@@ -711,10 +710,10 @@
       <t>Thanks to Jonathan Rosenberg, Matthew Kaufman and others at Skype for
       the ASCII drawings in section 1.</t>
 
-      <t>Thanks to Alissa Cooper, Bjoern Hoehrmann, Colin Perkins, Colton
-      Shields, Eric Rescorla, Heath Matlock, Henry Sinnreich, Justin Uberti,
-      Keith Drage, Magnus Westerlund, Olle E. Johansson, Sean Turner and Simon
-      Leinen for document review.</t>
+      <t>Thanks to Alissa Cooper, Bjoern Hoehrmann, Colin Perkins,
+      Colton Shields, Eric Rescorla, Heath Matlock, Henry Sinnreich,
+      Justin Uberti, Keith Drage, Magnus Westerlund, Olle E. Johansson,
+      Sean Turner and Simon Leinen for document review.</t>
     </section>
   </middle>
 
