@@ -593,8 +593,8 @@
 
       <t><list style="numbers">
           <t>The WebRTC media negotiations will be capable of representing the
-          same SDP offer/answer semantics that are used in SIP <xref
-          target="RFC3264"/>, in such a way that it is possible to build a
+          same SDP offer/answer semantics <xref target="RFC3264"/> that are
+          used in SIP, in such a way that it is possible to build a
           signaling gateway between SIP and the WebRTC media negotiation.</t>
 
           <t>It will be possible to gateway between legacy SIP devices that
