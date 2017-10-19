@@ -537,8 +537,8 @@
       the communication, and the interaction with any intermediate entities
       that handle the data, but do not modify it (such as TURN relays).</t>
 
-      <t>It includes necessary functions for congestion control: When not to
-      send data.</t>
+      <t>It includes necessary functions for congestion control,
+      retransmission, and in-order delivery.</t>
 
       <t>WebRTC endpoints MUST implement the transport protocols described in
       <xref target="I-D.ietf-rtcweb-transports"/>.</t>
