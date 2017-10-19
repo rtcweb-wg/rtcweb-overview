@@ -323,12 +323,12 @@
     </section>
 
     <section title="Architecture and Functionality groups">
-      <t>The model of real-time support for browser-based applications does
-      not assume that the browser will contain all the functions that need to
-      be performed in order to have a function such as a telephone or a video
-      conferencing unit; the vision is that the browser will have the
-      functions that are needed for a Web application, working in conjunction
-      with its backend servers, to implement these functions.</t>
+     <t>For browser-based applications, the model for real-time support does
+     not assume that the browser will contain all the functions needed for
+     an application such as a telephone or a video conference.  The vision is
+     that the browser will have the functions needed for a Web application,
+     working in conjunction with its backend servers, to implement these
+     functions.</t>
 
       <t>This means that two vital interfaces need specification: The
       protocols that browsers use to talk to each other, without any
