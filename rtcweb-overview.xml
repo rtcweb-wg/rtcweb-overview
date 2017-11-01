@@ -208,7 +208,7 @@
               
             <t hangText="ICE Agent:">An implementation of the Interactive
             Connectivity Establishment (ICE) <xref
-            target="I-D.ietf-ice-rfc5245bis"/> protocol. An ICE Agent may also
+            target="RFC5245"/> protocol. An ICE Agent may also
             be an SDP Agent, but there exist ICE Agents that do not use SDP
             (for instance those that use Jingle <xref target="XEP-0166">
             </xref>).</t> 
@@ -253,15 +253,15 @@
             or WebRTC UA) Something that conforms to both the protocol
             specification and the Javascript API cited above.</t>
 
-            <t hangtext="WebRTC non-Browser:"> Something that conforms to
+            <t hangText="WebRTC non-Browser:"> Something that conforms to
             the protocol specification, but does not claim to implement the
             Javascript API.  This can also be called a "WebRTC device" or
             "WebRTC native application".</t>
 
-            <t hangtext="WebRTC Endpoint:"> Either a WebRTC browser or a
+            <t hangText="WebRTC Endpoint:"> Either a WebRTC browser or a
             WebRTC non-browser. It conforms to the protocol specification.</t>
 
-            <t hangtext="WebRTC-compatible Endpoint:"> An endpoint that is able
+            <t hangText="WebRTC-compatible Endpoint:"> An endpoint that is able
             to successfully communicate with a WebRTC endpoint, but may fail to
             meet some requirements of a WebRTC endpoint. This may limit where
             in the network such an endpoint can be attached, or may limit the
@@ -270,7 +270,7 @@
             is to note the implications on WebRTC-compatible endpoints of the
             requirements placed on WebRTC endpoints.</t>
 
-            <t hangtext="WebRTC Gateway:"> A WebRTC-compatible endpoint that
+            <t hangText="WebRTC Gateway:"> A WebRTC-compatible endpoint that
             mediates media traffic to non-WebRTC entities.</t>
           </list>All WebRTC browsers are WebRTC endpoints, so any requirement
         on a WebRTC endpoint also applies to a WebRTC browser.</t>
@@ -740,11 +740,11 @@
 
       <?rfc include='reference.RFC.3711'?>
 
+      <?rfc include='reference.RFC.5245'?>
+
       <?rfc include='reference.RFC.7742'?>
 
       <?rfc include='reference.RFC.7874'?>
-
-      <?rfc include='reference.I-D.ietf-ice-rfc5245bis'?>
 
       <?rfc include='reference.I-D.ietf-rtcweb-security'?>
 
